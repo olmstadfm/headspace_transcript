@@ -1,7 +1,11 @@
+
 %html
   %head
     %title Headspace / Take 10 / 1
     %meta(http-equiv="Content-Type" content="text/html; charset=utf-8")
+
+    :css
+      tr:hover { background-color: lightyellow; }
       
   %body
     .transcript    
@@ -16,8 +20,11 @@
         %br
     .sidebyside
       %h1 Параллельный текст           
-      %table{border: 1}
+      %table
         - for l in enru
           %tr
             %td= l[0]
             %td= l[1]
+
+    %hr
+    = "Обновлено #{last_update}"
