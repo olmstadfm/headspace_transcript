@@ -1,0 +1,23 @@
+%html
+  %head
+    %title Headspace / Take 10 / 1
+    %meta(http-equiv="Content-Type" content="text/html; charset=utf-8")
+      
+  %body
+    .transcript    
+      %h1 Транскрипт
+      - for l in enru
+        = l[0]
+        %br
+    .translation
+      %h1 Подстрочник  
+      - for l in enru
+        = l[1]
+        %br
+    .sidebyside
+      %h1 Параллельный текст           
+      %table{border: 1}
+        - for l in enru
+          %tr
+            %td= l[0]
+            %td= l[1]
